@@ -1,6 +1,6 @@
-# Binaries
-aws-term
-aws-term.exe
+# Binaries (at root level only)
+/aws-term
+/aws-term.exe
 *.exe
 *.dll
 *.so
