@@ -14,7 +14,39 @@ A CLI tool to manage AWS SSO sessions and set up terminal environment variables 
 
 ## Installation
 
-### From Source
+### Quick Install (Recommended)
+
+Install or update with a single command (no sudo required):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ysaakpr/aws-term/main/install.sh | bash
+```
+
+This will:
+- Detect your OS and architecture (macOS Intel/Apple Silicon, Linux)
+- Download the latest release
+- Install to `~/.local/bin`
+- Provide PATH configuration instructions if needed
+
+#### Custom Install Location
+
+```bash
+AWS_TERM_INSTALL_DIR=/custom/path curl -fsSL https://raw.githubusercontent.com/ysaakpr/aws-term/main/install.sh | bash
+```
+
+### Download Binary Manually
+
+Download the latest release from [GitHub Releases](https://github.com/ysaakpr/aws-term/releases):
+
+| Platform | Architecture | Download |
+|----------|-------------|----------|
+| macOS | Apple Silicon (M1/M2/M3) | `aws-term-darwin-arm64.tar.gz` |
+| macOS | Intel | `aws-term-darwin-amd64.tar.gz` |
+| Linux | x86_64 | `aws-term-linux-amd64.tar.gz` |
+| Linux | ARM64 | `aws-term-linux-arm64.tar.gz` |
+| Windows | x86_64 | `aws-term-windows-amd64.zip` |
+
+### Build from Source
 
 ```bash
 # Clone the repository
@@ -24,15 +56,14 @@ cd aws-term
 # Build
 make build
 
-# Install to /usr/local/bin (optional)
-make install
+# Install to /usr/local/bin (requires sudo)
+sudo make install
 ```
 
-### Manual Installation
+### Go Install
 
 ```bash
-go build -o aws-term ./cmd/aws-term
-mv aws-term /usr/local/bin/
+go install github.com/ysaakpr/aws-term/cmd/aws-term@latest
 ```
 
 ## Usage
