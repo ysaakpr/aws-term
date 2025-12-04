@@ -1,6 +1,6 @@
 module github.com/ysaakpr/aws-term
 
-go 1.24.0
+go 1.25
 
 require (
 	github.com/aws/aws-sdk-go-v2 v1.40.1
