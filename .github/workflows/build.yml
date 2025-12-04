@@ -57,7 +57,7 @@ jobs:
           go build -o aws-term-${{ matrix.goos }}-${{ matrix.goarch }}${ext} ./cmd/aws-term
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: aws-term-${{ matrix.goos }}-${{ matrix.goarch }}
           path: aws-term-*
